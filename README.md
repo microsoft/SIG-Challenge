@@ -21,7 +21,7 @@ the <b>SIG</b> metric being directly correlated with the signal quality.
 Nevertheless, participants could use any metrics for the model's evaluation.
 
 ## Datasets
-* <b>Test set</b> will be released on the December 1st 2022.
+* <b>Test set</b> is available in [test_data](https://github.com/microsoft/SIG-Challenge/tree/main/test_data) directory.
 * <b>Blind set</b> will be released on the January 15th 2023.
 
 ## Contributing
