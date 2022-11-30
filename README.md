@@ -1,14 +1,28 @@
-# Project
+# Speech Signal Improvement Challenge – ICASSP 2023
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+The Speech Signal Improvement Challenge Grand Challenge proposal at ICASSP 2023 is intended to stimulate research in the area of improving the speech signal quality in communication systems. The speech signal quality is measured with SIG in ITU-T P.835 and is still a top issue in audio communication and conferencing systems.
 
-As the maintainer of this project, please make a few updates:
+This challenge is to benchmark the performance of real-time speech enhancement models with a real (not simulated) test set. The audio scenario is the send signal in telecommunication; it does not include echo impairments. Participants will evaluate their speech enhancement model on a test set and submit the results (clips) for evaluation.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+For more details about the challenge, please visit the challenge 
+[website](https://www.microsoft.com/en-us/research/academic-program/speech-signal-improvement-challenge-icassp-2023/).
+The paper will be released soon.
+
+## Training data
+
+The datasets are provided under the original terms that Microsoft received such datasets.
+For the training data, we suggest participants to use [AEC-Challenge data](https://github.com/microsoft/AEC-Challenge) and [DNS-Challenge data](https://github.com/microsoft/DNS-Challenge), presented in the <b>Dataset licenses</b> section. 
+Nevertheless, participants could use any other publicly available data for the training.
+
+## Evaluation metrics
+Our evaluation will be based on subjective listening test.
+We suggest participants to evaluate models also in accordance with the [DNSMOS P.835](https://github.com/microsoft/DNS-Challenge/tree/master/DNSMOS),
+the <b>SIG</b> metric being directly correlated with the signal quality.
+Nevertheless, participants could use any metrics for the model's evaluation.
+
+## Datasets
+* <b>Test set</b> will be released on the December 1st 2022.
+* <b>Blind set</b> will be released on the January 15th 2023.
 
 ## Contributing
 
