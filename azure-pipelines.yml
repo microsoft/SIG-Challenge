@@ -1,8 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger: 
 - main 
 
@@ -13,6 +8,7 @@ steps:
 - task: CredScan@2 
   inputs: 
     toolMajorVersion: 'V2' 
+
 - task: ESLint@1 
   inputs: 
     Configuration: 'recommended' 
@@ -20,6 +16,19 @@ steps:
     ErrorLevel: 'warn' 
 
 - task: Semmle@0
+  env: 
+    SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+  inputs: 
+    sourceCodeDirectory: '$(Build.SourcesDirectory)' 
+    language: 'tsandjs' 
+    includeNodeModules: true
+    querySuite: 'Recommended' 
+    timeout: '1800' 
+    ram: '16384' 
+    addProjectDirToScanningExclusionList: true
+
+
+- task: Semmle@1
   inputs: 
     sourceCodeDirectory: '$(Build.SourcesDirectory)' 
     language: 'python' 
