@@ -1,11 +1,11 @@
-# Speech Signal Improvement Challenge – ICASSP 2023
+# Speech Signal Improvement Challenge – ICASSP 2024
 
-The Speech Signal Improvement Challenge Grand Challenge proposal at ICASSP 2023 is intended to stimulate research in the area of improving the speech signal quality in communication systems. The speech signal quality is measured with SIG in ITU-T P.835 and is still a top issue in audio communication and conferencing systems.
+The Speech Signal Improvement Challenge Grand Challenge proposal at ICASSP 2024 is intended to stimulate research in the area of improving the speech signal quality in communication systems. The speech signal quality is measured with SIG in ITU-T P.804 and is still a top issue in audio communication and conferencing systems.
 
 This challenge is to benchmark the performance of real-time speech enhancement models with a real (not simulated) test set. The audio scenario is the send signal in telecommunication; it does not include echo impairments. Participants will evaluate their speech enhancement model on a test set and submit the results (clips) for evaluation.
 
 For more details about the challenge, please visit the challenge 
-[website](https://www.microsoft.com/en-us/research/academic-program/speech-signal-improvement-challenge-icassp-2023/).
+[website](https://www.microsoft.com/en-us/research/academic-program/speech-signal-improvement-challenge-icassp-2024/).
 The paper will be released soon.
 
 ## Training data
@@ -21,8 +21,8 @@ the <b>SIG</b> metric being directly correlated with the signal quality.
 Nevertheless, participants could use any metrics for the model's evaluation.
 
 ## Datasets
-* <b>Test set</b> is available in [test_data](https://github.com/microsoft/SIG-Challenge/tree/main/test_data) directory.
-* <b>Blind set</b> will be released on the January 15th 2023.
+* <b>Test set</b> is available in [test_data](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2023/test_data) directory. Moreover, we release the transcripts for the test set, such that the participants could compute Word Error Rate (WER) on the test set.
+* <b>Blind set</b> will be released on the December 5th 2023.
 
 ## Contributing
 
