@@ -14,6 +14,18 @@ The datasets are provided under the original terms that Microsoft received such 
 For the training data, we suggest participants to use [AEC-Challenge data](https://github.com/microsoft/AEC-Challenge) and [DNS-Challenge data](https://github.com/microsoft/DNS-Challenge), presented in the <b>Dataset licenses</b> section. 
 Nevertheless, participants could use any other publicly available data for the training.
 
+
+## Data synthesizer
+
+We released a [demo data synthesizer](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2024/demo_synthesizer) which can be used to generate distorted and noisy samples from clean audio files.
+While we strongly encourage participants to utilize and enhance this synthesizer, they are also free to employ alternative methods of their preference.
+
+## Global processing and latency checker
+
+We released a Python [script](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2024/global_test_samples), designed for verifying that your model is compliant with the latency requirements specified by the challenge. 
+We highly recommend that participants rigorously assess the compatibility of their architecture using this script.
+Regarding generative models, this check could be ignored.
+
 ## Evaluation metrics
 Our evaluation will be based on subjective listening test.
 We suggest participants to evaluate models also in accordance with the [DNSMOS P.835](https://github.com/microsoft/DNS-Challenge/tree/master/DNSMOS),

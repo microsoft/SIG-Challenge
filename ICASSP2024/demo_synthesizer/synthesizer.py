@@ -291,6 +291,9 @@ class Synthesizer:
 
 
 if __name__ == '__main__':
+    '''
+    Usage example for the Synthesizer. This example generates a training data dict.
+    '''
     s = Synthesizer(r"synthesizer_config.yaml")
     audio = s.generate()
 

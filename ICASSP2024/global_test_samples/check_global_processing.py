@@ -7,6 +7,13 @@ import glob
 
 
 if __name__ == '__main__':
+    '''
+    This script checks if the enhancing model contains a higher latency than allowed.
+    The directory with the files processed with the enhancing model should be provided.
+    The files must not have any naming modifications.
+    
+    Usage example: python3 check_global_processing.py --path path/to/enhanced/data 
+    '''
     parser = argparse.ArgumentParser(description="Global processing checker.")
     parser.add_argument("path", type=str, help="Path to the directory containing the enhanced audio files "
                                                "(without any naming modification).")
