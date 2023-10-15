@@ -1,0 +1,113 @@
+# Datagen parameters
+onlinesynth_duration: 15
+onlinesynth_sampling_rate: 48000
+onlinesynth_resampling_type: fft  # resampling type if input file has sr != onlinesynth_sampling_rate
+
+
+onlinesynth_nearend_datasets:
+  dataset1:
+    weight: 1.0
+    dir: 'path/to/data'
+  dataset2:
+    weight: 1.0
+    dir: 'path/to/data'
+
+onlinesynth_nearend_noises:
+  dns_challenge:
+    weight: 1.0
+    dir: 'path/to/data'
+
+
+onlinesynth_mic_distortions:
+  num_applications: 
+    1: 1.0
+  distortion_types:
+    param_ranges:
+      mic_bandpass:
+        likelihood: 0.2
+        low_freq: [10, 100]
+        high_freq: [2000, 4000]
+        order: 7
+
+      # Speaker change augmentations
+      speaker_gain_delta_db:
+        range: [-10, 10]
+        likelihood: 0.2
+
+      # Room and mic augmentations
+      allow_rir_and_generated: true
+      room_freeverb_room_size:
+        range: [0.01, 0.3]
+        likelihood: 0.2
+        range_mix: [0.3, 0.6]  # Randomize wet / dry levels
+      room_bad_mic_response:
+        likelihood: 0.5
+      room_bad_mic_params:
+        low_shelf_hz: [50, 700]
+        low_shelf_db: [-12, 12]
+        high_shelf_hz: [4500, 7500]
+        high_shelf_db: [-12, 12]
+        peak_count: [0, 7]
+        peak_hz: [600, 7400]
+        peak_db: [-6, 6]
+
+      # ADC augmentations
+      dac_highpass_cutoff_hz:
+        range: [4, 100]
+        likelihood: 0.7
+      dac_lowpass_cutoff_hz:
+        range: [5000, 7900]
+        likelihood: 0.7
+      dac_bitdepth:
+        range: [8, 24]
+        likelihood: 0.1
+
+      # AGC augmentations
+      agc_expand_ratio:
+        range: [1.4, 2.1]
+        likelihood: 1.0
+        range_mix: [ -10.0, 0.01 ]  # Randomize gate level
+
+      agc_gain_db:
+        range: [5, 20]
+        likelihood: 0.1
+
+      # Preprocessing augmentations. Note: Resampling is only done once - either here,
+      # or by the GSM processor, which always resamples to 8kHz and takes precedence.
+      prepro_hardlimit_enabled:
+        likelihood: 0.25
+      prepro_postclip_gain_db:
+        range: [-5, 0]
+        likelihood: 0.25
+      prepro_sample_rate_hz:
+        range: [3000, 32000]
+        likelihood: 0.4
+      prepro_or_gsm_resample_quality:
+        range: ["ZeroOrderHold", "Linear", "CatmullRom", "WindowedSinc"]
+        likelihood: 1.0  # Best to always set this
+
+      # Extra "weird distortions" augmentations
+      extra_phaser_rate_hz:
+        range: [100, 500]
+        likelihood: 0.02
+      extra_tanh_distortion_drive_db:
+        range: [2, 10]
+        likelihood: 0.01
+
+      # Microaugmentations
+      microaug_shift_ms:
+        range: [0.0, 2.0 / 16000.0]
+        likelihood: 0.0
+
+      # Transmission augmentation
+      gsm_transmission_enabled:
+        likelihood: 0.25
+
+
+onlinesynth_nearend_prop_noisy: 0.5  # Percentage of nearend files which are altered with noise
+onlinesynth_nearend_snr_interval: [ -5, 20 ]  # SNR (in dB) interval for nearend files affected by noise
+onlinesynth_nearend_prop_add_gaussian_ne_noise: 0.6  # Percentage of additional Gaussian noise added over existing noise
+
+onlinesynth_nearend_apply_gain_change: 0.2  # Probability to apply random gain change in nearend signal
+onlinesynth_nearend_normalize_volume: -27  # dB level for nearend / target volume normalization. Comment if no normalization is desired
+

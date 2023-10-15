@@ -1,0 +1,1 @@
+die kodierung der daten erfolgt im manchester-code
