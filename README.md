@@ -30,6 +30,9 @@ Regarding generative models, this check could be ignored.
 Our evaluation will be based on subjective listening test.
 We suggest participants to evaluate models also in accordance with the [DNSMOS P.835](https://github.com/microsoft/DNS-Challenge/tree/master/DNSMOS),
 the <b>SIG</b> metric being directly correlated with the signal quality.
+We have also developed the [SigMOS](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2024/sigmos) estimator, 
+which estimates the [P.804](https://arxiv.org/pdf/2309.07385.pdf) audio quality dimensions. 
+This model was trained using subjectively annotated data from P.804 to mimic human perception of audio quality.
 Nevertheless, participants could use any metrics for the model's evaluation.
 
 ## Datasets
