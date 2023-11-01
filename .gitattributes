@@ -1,3 +1,4 @@
 ICASSP2023/test_data/*.wav filter=lfs diff=lfs merge=lfs -text
 ICASSP2023/blind_data/*.wav filter=lfs diff=lfs merge=lfs -text
 ICASSP2024/global_test_samples/*.wav filter=lfs diff=lfs merge=lfs -text
+ICASSP2024/sigmos/model-sigmos_1697718653_41d092e8-epo-200.onnx filter=lfs diff=lfs merge=lfs -text
