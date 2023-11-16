@@ -35,6 +35,10 @@ which estimates the [P.804](https://arxiv.org/pdf/2309.07385.pdf) audio quality 
 This model was trained using subjectively annotated data from P.804 to mimic human perception of audio quality.
 Nevertheless, participants could use any metrics for the model's evaluation.
 
+We provide an [example](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2024/loudness) 
+subjectively annotated with MOS 5 for the LOUDNESS dimension. This example might help participants
+to tune their algorithm in terms of loudness.
+
 ## Datasets
 * <b>Test set</b> is available in [test_data](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2023/test_data) directory. Moreover, we release the transcripts for the test set, such that the participants could compute Word Error Rate (WER) on the test set.
 * <b>Blind set</b> will be released on the December 5th 2023.
