@@ -41,7 +41,7 @@ to tune their algorithm in terms of loudness.
 
 ## Datasets
 * <b>Test set</b> is available in [test_data](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2023/test_data) directory. Moreover, we release the transcripts for the test set, such that the participants could compute Word Error Rate (WER) on the test set.
-* <b>Blind set</b> will be released on the December 5th 2023.
+* <b>Blind set</b> is available in [blind_data](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2024/blind_data) directory.
 
 ## Contributing
 
