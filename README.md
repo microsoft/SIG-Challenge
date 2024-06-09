@@ -43,6 +43,29 @@ to tune their algorithm in terms of loudness.
 * <b>Test set</b> is available in [test_data](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2023/test_data) directory. Moreover, we release the transcripts for the test set, such that the participants could compute Word Error Rate (WER) on the test set.
 * <b>Blind set</b> is available in [blind_data](https://github.com/microsoft/SIG-Challenge/tree/main/ICASSP2024/blind_data) directory.
 
+## Citation:
+If you use this dataset in a publication please cite the following paper:<br />
+
+```BibTex
+@inproceedings{ristea2024icassp,
+  title={ICASSP 2024 Speech Signal Improvement Challenge},
+  author={Ristea, Nicolae Catalin and Saabas, Ando and Cutler, Ross and Naderi, Babak and Braun, Sebastian and Branets, Solomiya},
+  booktitle={ICASSP},
+  year={2024}
+}
+```
+
+The previous challenges are: 
+```BibTex
+@article{cutler2024icassp,
+  title={ICASSP 2023 speech signal improvement challenge},
+  author={Cutler, Ross and Saabas, Ando and Naderi, Babak and Ristea, Nicolae-C{\u{a}}t{\u{a}}lin and Braun, Sebastian and Branets, Solomiya},
+  journal={IEEE Open Journal of Signal Processing},
+  year={2024},
+  publisher={IEEE}
+}
+```
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
